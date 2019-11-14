@@ -1,2 +1,6 @@
 kubeadm join 10.0.3.15:6443 --token sc2ncy.zscw4uomj57j49w6 \
     --discovery-token-ca-cert-hash sha256:e8ff89420d2614fb1ac404bcbb2f68d7773fa56540ada85204979378d080c01b
+
+
+---new token---
+s202vz.gosfo2f9453bz4rd
