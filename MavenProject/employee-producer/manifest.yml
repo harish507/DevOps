@@ -1,0 +1,6 @@
+applications:
+- name: spring-basic-manifest-test
+  path: target/employee-producer-0.0.1-SNAPSHOT.jar
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  instances : 1
+  memory: 1G
