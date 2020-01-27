@@ -16,6 +16,10 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+                <sonar.projectKey>spring-maven-key</sonar.projectKey>
+                <sonar.organization>spring-demo</sonar.organization>
+                <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+                <sonar.login>530944673def7f21966646f03717727f12e54ed2</sonar.login>
 	</properties>
 
 	<dependencies>
