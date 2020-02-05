@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-emp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-emp
+  template:
+    metadata:
+      name: my-emp
+      labels:
+        app: my-emp
+    spec:
+      containers:
+      - name: my-emp
+        image: kavisuresh/employee
+        ports: 
+        - containerPort: 8888
+        
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-emp-service
+  labels:
+    app: my-emp
+spec:
+  selector:
+    app: my-emp
+  ports:
+  - name: http
+    protocol: TCP
+    port: 80
+    targetPort: 8888
+  type: LoadBalancer
