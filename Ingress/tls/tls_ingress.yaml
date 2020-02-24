@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: my-mc-ingress
+  annotations:
+    kubernetes.io/ingress.allow-http: "false"
+spec:
+  tls:
+  - secretName: my-first-secret
+  - secretName: my-first-secret
+  rules:
+  - host: harishtls.cf
+    http:
+      paths:
+      - backend:
+          serviceName: my-mc-service
+          servicePort: my-first-port
+  - host: uday.tls.com
+    http:
+      paths:
+      - backend:
+          serviceName: my-mc-service
+          servicePort: my-second-port
