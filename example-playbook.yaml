@@ -1,0 +1,20 @@
+---
+- hosts: localhost
+  connection: local
+  tasks:
+    - name: Creating frontend service
+      command: kubectl create -f my-emp-pod.yaml
+    - name: sleep for 10 seconds and continue with play
+      wait_for:
+        timeout: 10
+      delegate_to: localhost
+    - name: Creating Database Service 
+      command: kubectl create -f mongo.yaml
+    - name: sleep for 10 seconds and continue with play
+      wait_for:
+        timeout: 10
+      delegate_to: localhost
+    - name: Deploying Server Service
+      command: kubectl create -f tomcat-deployment.yaml
+    - debug:
+        var: main
