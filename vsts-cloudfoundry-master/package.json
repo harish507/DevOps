@@ -35,7 +35,7 @@
     "mocha": "^5.2.0",
     "semver": "^4.3.3",
     "shelljs": "^0.3.0",
-    "tfx-cli": "^0.6.4",
+    "tfx-cli": "^0.12.0",
     "through2": "^0.6.3",
     "typescript": "^2.4.1",
     "validator": "^3.33.0",
